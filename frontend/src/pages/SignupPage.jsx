@@ -36,7 +36,7 @@ function SignupPage() {
     // sending a post request to the server with the form data
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://airbnb-w9jq.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

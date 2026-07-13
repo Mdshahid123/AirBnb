@@ -7,7 +7,7 @@ import { useEffect } from "react";
 function NavBar() {
   const [user, updateUser] = useState(false);
   const [showMenu, updateMenu] = useState(false);
-  const api = "http://localhost:3000/currentUser";
+  const api = "https://airbnb-w9jq.onrender.com/currentUser";
 
   async function currentUser() {
     try {

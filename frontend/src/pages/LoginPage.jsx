@@ -17,7 +17,7 @@ function LoginPage() {
       email,
       password,
     };
-    const api = "http://localhost:3000/login";
+    const api = "https://airbnb-w9jq.onrender.com/login";
     try {
       const port = "localhost:3000/login";
       const response = await fetch(api, {
