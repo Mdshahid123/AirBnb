@@ -73,8 +73,8 @@ async function submitSignupForm(req, res) {
     let token = await genToken(user._id);
     res.cookie("token", token, {
       httpOnly: true,
-      secure: (process.env.node_environment = "production"),
-      sameSite: "strict",
+      secure:process.env.node_environment === "production",
+      sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
@@ -154,7 +154,7 @@ async function submitLoginForm(req, res) {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // false on localhost
-      sameSite: "lax", // use "lax" for localhost
+      sameSite: "none", // use "lax" for localhost
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
