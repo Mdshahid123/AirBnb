@@ -10,7 +10,7 @@ const app = express();
 // middle are registration
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://airbnbfrontend-hwsl.onrender.com",
     credentials: true,
   }),
 ); //it will allow the cross origin request from the frontend to the backend
