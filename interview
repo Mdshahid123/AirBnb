@@ -1,0 +1,63 @@
+If an interviewer asks, "Why did you use FormData instead of useState?", you can answer:
+
+"I used FormData because I only needed the form values when the user submitted the form. It keeps the code simpler and avoids creating separate state variables for each input. If I needed real-time validation or UI updates while the user types, I would use controlled components with useState instead."
+
+
+
+
+Interview Question
+
+Why do we use credentials: "include"?
+
+Because browsers do not send cookies by default when making cross-origin requests. Setting:
+
+credentials: "include"
+
+tells the browser to send cookies (such as a JWT stored in an HTTP-only cookie) along with the request, allowing the server to identify the authenticated user. Without it, routes like /currentUser often return an unauthorized response even if the user has already logged in.
+
+
+
+An HTTP-only cookie is a cookie that cannot be accessed by JavaScript (document.cookie). It can only be sent automatically by the browser in HTTP/HTTPS requests. This helps protect sensitive data like JWTs from being stolen through Cross-Site Scripting (XSS) attacks.
+
+
+
+If an interviewer asks:
+
+How can you run your Express app over HTTPS on localhost?
+
+You can answer:
+
+"I need an SSL/TLS certificate and private key. I can generate a trusted local certificate using a tool like mkcert, then use Node.js's built-in https module with https.createServer() instead of app.listen(). This allows the browser to establish an HTTPS connection with https://localhost.
+"
+
+<!-- http server -->
+
+app.listen()-it wii start the server to establish a connection with frontend using only http reuqest
+
+
+<!-- https server  -->
+const https = require("https");
+const fs = require("fs");
+const express = require("express");
+
+const app = express();
+
+const options = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem"),
+};
+
+https.createServer(options, app).listen(3000, () => {
+  console.log("server is runnit at https:localhost:3000");
+});
+
+
+
+ques: if i have created a http server using app.liten() then in production level i have to change the code for https ??
+
+
+Usually, no. In production, you typically do not change your Express code.
+
+Most production deployments use a reverse proxy such as Nginx in front of your Express application.
+
+

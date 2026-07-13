@@ -1,0 +1,91 @@
+.city-section{
+    width:95%;
+    margin-top: 50px;
+    margin-bottom:100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Heading */
+
+.city-title{
+
+    font-size:30px;
+
+    font-weight:600;
+
+    color:#222;
+
+    
+} 
+
+/* Cards */
+
+.city-card-container{
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns:repeat(6,1fr) ;
+  gap: 20px;
+
+}
+
+
+/* Large Laptop */
+
+@media(max-width:1400px){
+
+.city-card-container{
+
+grid-template-columns:repeat(6,1fr);
+
+}
+
+}
+
+/* Laptop */
+
+@media(max-width:1200px){
+
+.city-card-container{
+
+grid-template-columns:repeat(6,1fr);
+
+}
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.city-card-container{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.city-card-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:500px){
+
+.city-card-container{
+
+grid-template-columns:1fr;
+
+}
+
+}

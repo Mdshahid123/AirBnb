@@ -1,0 +1,90 @@
+.listed-card{
+  cursor:pointer;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Image ---------- */
+
+.listed-card-image{
+    width:100%;
+    height:100%;
+    position: relative;
+
+} 
+
+.listed-card-image img{
+   border-radius:20px;
+   width: 100%;
+   height: 100%;
+}
+
+/* ---------- Heart ---------- */
+
+.wishlist-btn{
+
+     position:absolute;
+     color: #6a6a6a;              /* Dark gray fill */
+     font-size: 24px;
+     stroke: white;               
+     stroke-width: 30px;
+     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+
+    top:12px;
+    right:12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.wishlist-btn:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ---------- Info ---------- */
+
+ .listed-card-info{
+
+    margin-top:12px;
+  /* background-color: palevioletred; */
+} 
+
+ .listed-card-title{
+
+    font-size:16px;
+
+    color:#222222;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+.listed-card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+} 
+.listed-card-price{
+
+    color:#717171;
+
+    font-size:15px;
+}
+
+.listed-card-price span{
+
+    font-weight:400;
+} 
+ .listed-card-rating{
+
+    color:#717171;
+
+    font-size:15px;
+} 
